@@ -44,3 +44,15 @@ brightness.  The luminance of the `1` color ring should roughly match
 the luminance of the `1` line on the gray chart, although I'm not
 entirely sure that I'm using the Rec.2020 color primaries for OKLCH so
 it's possible that everything is slightly off.
+
+## Testing
+
+This image is intended to be used as a test of the processing pipeline
+for various tools that can (or claim to be able to) resize and/or
+manipulate HDR images.  
+
+For example, loading this AVIF into Photoshop on my desktop and trying
+to `Convert to Profile` to PS's generic "Rec.2100 PQ" profile drops
+the brightest visible white on my monitor from ~2.3 stops (between the
+2 and 3 lines) down to ~5.7 stops and kills all of the purples all the
+way into ring 5, although yellows and blues remain into ring 3.
