@@ -124,10 +124,10 @@ func main() {
 		}
 		labelColor := image.NewUniform(color.RGBA64{labelLevel, labelLevel, labelLevel, color.Opaque.A})
 		offset := 4
-		if ring < 10 {
+		if ring > 9 {
 			offset = 9 // center
 		}
-		drawLabel(i, imageSize/2-int(outer)+offset, imageSize/2+6, fmt.Sprintf("%d", ring), labelColor)
+		drawLabel(i, imageSize/2-int(outer)+offset, imageSize/2+6, fmt.Sprintf("%d", rings-ring+1), labelColor)
 	}
 
 	// Prepare to write
